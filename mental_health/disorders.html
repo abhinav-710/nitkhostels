@@ -69,6 +69,7 @@
 	}
 	ul{
 		margin: 0%;
+		padding: 0%;
 	}
 	ul li{
 		padding: 12px;
@@ -97,9 +98,6 @@
 		color: rgba(0, 0, 0, 0.975);
 		
 	}
-	.search{
-		padding: 15px;
-	}
 	input[type=text]{
 		width: 150px;
 		text-decoration: none !important;
@@ -110,6 +108,32 @@
 		height: 30px;
 		color: white;
 	}
+	.search{
+		padding: 15px;
+		position: relative;
+		display: inline-block;
+	}
+	.search-dropdown-menu{
+		display: none;
+		position: absolute;
+		background-color: #f1f1f1;
+		min-width: 200px;
+		box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+		top: 45px;
+		z-index: 1;
+	}
+	.search-dropdown-menu a{
+		color: black;
+		padding: 12px 9px;
+		text-decoration: none;
+		display: block;
+		font-size: revert;
+	}
+	.search-dropdown-menu a:hover{
+		background-color: rgba(255, 255, 255, 0.5);
+	}
+	.search-dropdown-menu a:hover {background-color: #ddd;}
+	.search:hover .search-dropdown-menu {display: block;}
 	input[type=text]:focus{
 		outline: none;
 	}
@@ -189,6 +213,7 @@
 			<div class="search" style="display: flex;">
 				<input type="text" class="search-input" placeholder="Search...">
 				<i class="icon fa-search" id="search-icon"></i>
+				<div class="search-dropdown-menu"></div>
 			</div>
 			<div class="break"></div>
 			<div class="navbar-collapse collapse" >
@@ -209,7 +234,8 @@
 						<a class="dropdown-item" href="#mood-disorder">Mood Disorder</a>
 						<a class="dropdown-item" href="#obsessive-compulsive-disorder">OCD</a>
 						<a class="dropdown-item" href="#personality-disorder">Personality Disorder</a>
-						<a class="dropdown-item" href="#psychotic-disorder">Suicidal Behavior</a>
+						<a class="dropdown-item" href="#psychotic-disorder">Psychotic Disorder</a>
+						<a class="dropdown-item" href="#suicidal-behavior">Suicidal Behavior</a>
 						<a class="dropdown-item" href="#post-traumatic-stress-disorder">PTSD</a>
 						</div>
 					</li>
@@ -369,7 +395,7 @@
 			</div>
 		</div>
 	</section>
-    <section  class="wrapper style2" id="Suicidal-behavior" >
+    <section  class="wrapper style2" id="suicidal-behavior" >
 		<div class="inner">
 			<div class="box">
 				<div class="content">
@@ -441,19 +467,35 @@
 	</footer>
 
 
-	<!-- Scripts -->
-	<!-- <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css" integrity="sha384-rwoIResjU2yc3z8GV/NPeZWAv56rSmLldC3R/AZzGRnGxQQKnKkoFVhFQhNUwEyJ" crossorigin="anonymous">
-
-	<script src="https://code.jquery.com/jquery-3.1.1.slim.min.js" integrity="sha384-A7FZj7v+d/sdmMqp/nOQwliLvUsJfDHW+k9Omg/a/EheAdgtzNs3hpfag6Ed950n" crossorigin="anonymous"></script>
-	<script src="https://cdnjs.cloudflare.com/ajax/libs/tether/1.4.0/js/tether.min.js" integrity="sha384-DztdAPBWPRXSA/3eYEEUWrWCy7G5KFbe8fFjk5JAIxUYHKkDx6Qin1DkWx51bBrb" crossorigin="anonymous"></script>
-	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/js/bootstrap.min.js" integrity="sha384-vBWWzlZJ8ea9aCX4pEW3rVHjgjt7zpkNpZk+02D9phzyeVkE+jo0ieGizqPLForn" crossorigin="anonymous"></script> -->
 	<script>
 		var hamContent =true;
 		const hamBtn = document.querySelector(".navbar-btn");
-		console.log(hamBtn);
+		//console.log(hamBtn);
 		hamBtn.addEventListener("click",()=>{
 			document.querySelector(".navbar-collapse").classList.toggle('collapse');
-		})
+		});
+		var dis ={ "anxiety disorders":"anxiety-disorde","behavioral disorders":"behavioral-disorder","eating disorders":"eating-disorder","substance use disorders":"mental-health-and-substance-use-disorder","mood disorders":"mood-disorder","obsessive compulsive Disorder":"obsessive-compulsive-disorder","personality disorders":"personality-disorder","psychotic disorders":"psychotic-disorder","suicidal behavior":"suicidal-behavior","trauma and stress related disorders":"post-traumatic-stress-disorder"};
+		var i;
+		const input = document.querySelector(".search-input");
+		const result = document.querySelector('.search-dropdown-menu');
+		input.addEventListener("keyup",()=>{
+			//console.log(result);
+			var filter = input.value.toLowerCase();
+			if(filter!=""){
+				//console.log(filter);
+				var searchResults="";
+				for(s in dis){
+					if(s.startsWith(filter)){
+						searchResults+=`<a class="dropdown-item" href="#${dis[s]}">${s}</a>`;
+					}
+				}
+				//console.log(searchResults);
+				result.innerHTML=searchResults;
+			}
+			else result.innerHTML="";
+		});
+		
+
 
 	</script>
 	<script src="../assets/js/jquery.min.js" ></script>
