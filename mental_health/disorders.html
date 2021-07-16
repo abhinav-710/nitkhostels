@@ -1,0 +1,467 @@
+<!DOCTYPE HTML>
+
+<html>
+
+<head>
+	<title>NITK Hostels</title>
+	<meta charset="utf-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1" />
+	<link rel="stylesheet" href="../assets/css/main.css" />
+    <style>
+        .inner>header>p {
+      font-weight: bold;
+      font-size: 2rem;
+      color: rgba(255, 255, 255, 0.7);
+    }
+
+    #header>.logo {
+      display: flex;
+    }
+    .wrapper.style2{
+        padding: 2rem;
+    }
+	#search-icon {
+	font-size: 1.2rem;
+	margin-top: 3px;
+	}
+	
+	.dropdown-toggle {
+	background-color:rgba(0, 0, 0, 0.975) ;
+	color: rgba(255, 255, 255, 0.5);
+	padding: 2px;
+	font-size: 16px;
+	border: none;
+	}
+
+	.dropdown {
+	position: relative;
+	display: inline-block;
+	}
+
+	.dropdown-menu {
+	display: none;
+	position: absolute;
+	background-color: #f1f1f1;
+	min-width: 200px;
+	box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+	z-index: 1;
+	}
+
+	.dropdown-menu a {
+	color: black;
+	padding: 12px 9px;
+	text-decoration: none;
+	display: block;
+	font-size: revert;
+	}
+	.dropdown-menu a:hover{
+		background-color: rgba(255, 255, 255, 0.5);
+	}
+
+	
+	.dropdown-menu a:hover {background-color: #ddd;}
+
+	
+	.dropdown:hover .dropdown-menu {display: block;}
+	.navbar-collapse{
+		height: 100%;
+		padding: 1px;
+	}
+	ul{
+		margin: 0%;
+	}
+	ul li{
+		padding: 12px;
+	}
+	ul li a{
+		width: 100%;
+		text-decoration: none;
+		font-size: 16px;
+		color: rgba(255, 255, 255, 0.5);
+	}
+	.navbar-btn{
+		text-decoration: none;
+		border: none;
+		outline: none;
+		display: none;
+	}
+	.navbar-toggleable-md .container{
+		display: flex;
+		flex-wrap: wrap;
+		justify-content: space-between;
+	}
+	.navbar-nav{
+		display: flex;
+		justify-content: right;
+		text-decoration: none; 
+		color: rgba(0, 0, 0, 0.975);
+		
+	}
+	.search{
+		padding: 15px;
+	}
+	input[type=text]{
+		width: 150px;
+		text-decoration: none !important;
+		border: none;
+		border-bottom: solid 1px rgba(255, 255, 255, 0.125);
+		outline: none;
+		padding: 7px;
+		height: 30px;
+		color: white;
+	}
+	input[type=text]:focus{
+		outline: none;
+	}
+	.search i{
+		font-size: 6px;
+		margin-left: 12px;
+	}
+	@media only screen and (max-width: 575px) {
+		.navbar-nav{
+			display: block;
+		}
+		ul li{
+			padding-top: 5px;
+		}
+		.navbar-btn{
+			display: inline-block;
+			height: 27px;
+			width: 27px;
+			padding: 0%;
+			margin:15px;
+			background-color:rgba(0, 0, 0, 0.975) ;
+
+		}
+		.navbar-btn:hover{
+			background-color:rgba(0, 0, 0, 0.975) ;
+		}
+		.navbar-btn:focus{
+			background-color:rgba(0, 0, 0, 0.975) ;
+		}
+		.break {
+			flex-basis: 100%;
+			height: 0;
+		}
+		.collapse{
+		display: none;
+	}
+	}
+
+    </style>
+</head>
+
+<body class="subpage">
+
+	<!-- Header -->
+	<header id="header">
+		<div class="logo"><img src="../images/svg/nitklogo_white.svg" height="40"
+            width="40">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="index.html" st>NITK
+				Hostels </a></div>
+		<a href="#menu">Menu</a>
+	</header>
+
+	<!-- Nav -->
+	<nav id="menu">
+		<ul class="links">
+			<li><a href="index.html">Home</a></li>
+			<br/>
+			<li><a href="about.html">About us</a></li>
+			<li><a href="representatives.html">Representatives</a></li>
+			<li><a href="facilities.html">Facilities</a></li>
+			<li><a href="hostel_information.html">Hostel Information</a></li>
+			<li><a id="hostel_rules_regulations" href="hostel_rules_regulations.html">Hostel Rules & Regulations</a></li>
+			<li><a href="mental_health.html">Mental Health</a></li>
+		</ul>
+	</nav>
+
+	<!-- One -->
+	<section id="One" class="wrapper style3">
+		<div class="inner">
+			<p style="font-size: 50px" class="align-center">Mental Health</p>
+		</div>
+	</section>
+    <!--One-two-->
+	<section id="two" >
+		<nav  class="navbar navbar-toggleable-md" style="background-color: rgba(0, 0, 0, 0.975); ">
+			<div class="container"> 
+			<button class="navbar-btn"><img src="../images/icons8-menu-24.png"></button>
+			<div class="search" style="display: flex;">
+				<input type="text" class="search-input" placeholder="Search...">
+				<i class="icon fa-search" id="search-icon"></i>
+			</div>
+			<div class="break"></div>
+			<div class="navbar-collapse collapse" >
+				<ul class="navbar-nav links">
+					<!-- <li class="nav-item active">
+						<a class="nav-link" href="#">Link <span class="sr-only">(current)</span></a>
+					</li> -->
+					<li class="nav-item">
+						<a class="nav-link" href="./index.html">Main</a>
+					</li>
+					<li class="nav-item dropdown">
+						<a class="nav-link dropdown-toggle">Disorders</a>
+						<div class="dropdown-menu">
+						<a class="dropdown-item" href="#anxiety-disorder">Anxiety Disorder</a>
+						<a class="dropdown-item" href="#behavioral-disorder">Behavioral Disorder</a>
+						<a class="dropdown-item" href="#eating-disorder">Eating Disorder</a>
+						<a class="dropdown-item" href="#mental-health-and-substance-use-disorder">Substance Use Disorder</a>
+						<a class="dropdown-item" href="#mood-disorder">Mood Disorder</a>
+						<a class="dropdown-item" href="#obsessive-compulsive-disorder">OCD</a>
+						<a class="dropdown-item" href="#personality-disorder">Personality Disorder</a>
+						<a class="dropdown-item" href="#psychotic-disorder">Suicidal Behavior</a>
+						<a class="dropdown-item" href="#post-traumatic-stress-disorder">PTSD</a>
+						</div>
+					</li>
+					<li class="nav-item">
+						<a class="nav-link " href="#">Need Help</a>
+					</li>
+				</ul>
+			</div>
+			</div>
+		</nav>
+	 </section>
+	<!-- Two -->
+	<section  class="wrapper style2" id="anxiety-disorder" >
+		<div class="inner">
+			<div class="box">
+				<div class="content">
+					<header class="align-center">
+						<p style="font-size: medium;">Anxiety Disorder</p>
+						<h2></h2>
+					</header>
+					<p>People with anxiety disorder respond to certain objects or situations with fear and dread. They have physical reactions to those objects, such as a rapid heartbeat and sweating. An anxiety disorder is diagnosed if a person:</p>
+                    <ul>
+                        <li>Has an inappropriate response to a situation</li>
+                        <li>Cannot control the response</li>
+                        <li>Has an altered way of life due to the anxiety</li>
+                    </ul>
+				</div>
+			</div>
+		</div>
+	</section>
+    <section  class="wrapper style2" id="behavioral-disorder" >
+		<div class="inner">
+			<div class="box">
+				<div class="content">
+					<header class="align-center">
+						<p style="font-size: medium;" >Behavioral Disorder</p>
+						<h2></h2>
+					</header>
+					<p>Behavioral disorder involve a pattern of disruptive behaviors in children that last for at least 6 months and cause problems in school, at home and in social situations. Behavioral disorder involve a pattern of disruptive behaviors in children that last for at least 6 months and cause problems in school, at home and in social situations.Nearly everyone shows some of these behaviors at times, but behavior disorder are more serious.</p>
+                    <P>Behavioral disorder may involve: </P>
+                    <ul>
+                        <li>Inattention</li>
+                        <li>Hyperactivity</li>
+                        <li>Impulsivity</li>
+                        <li>Defiant behavior</li>
+                        <li>drug use</li>
+                        <li>criminal activity</li>
+                    </ul>
+				</div>
+			</div>
+		</div>
+	</section>
+    <section  class="wrapper style2" id="eating-disorder" >
+		<div class="inner">
+			<div class="box">
+				<div class="content">
+					<header class="align-center">
+						<p style="font-size: medium;" >Eating Disorder</p>
+						<h2></h2>
+					</header>
+					<p>Eating disorder involve extreme emotions, attitudes, and behaviors involving weight and food. The most common eating disorder include:</p>
+                    
+                    <ul>
+                        <li>Anorexia Nervosa</li>
+                        <li>Binge Eating</li>
+                        <li>Bulimia</li>
+                    </ul>
+				</div>
+			</div>
+		</div>
+	</section>
+
+    <section  class="wrapper style2" id="mental-health-and-substance-use-disorder" >
+		<div class="inner">
+			<div class="box">
+				<div class="content">
+					<header class="align-center">
+						<p style="font-size: medium;" >Mental Health and Substance Use Disorder</p>
+						<h2></h2>
+					</header>
+					<p>Mental health problems and substance use disorder sometimes occur together. This is because:</p>
+                    <ul>
+                        <li>Certain illegal drugs can cause people with an addiction to experience one or more symptoms of a mental health problem</li>
+                        <li>Mental health problems can sometimes lead to alcohol or drug use, as some people with a mental health problem may misuse these substances as a form of self-medication</li>
+                        <li>Mental and substance use disorder share some underlying causes, including changes in brain composition, genetic vulnerabilities, and early exposure to stress or trauma</li>
+                    </ul>
+				</div>
+			</div>
+		</div>
+	</section>
+    <section  class="wrapper style2" id="mood-disorder" >
+		<div class="inner">
+			<div class="box">
+				<div class="content">
+					<header class="align-center">
+						<p style="font-size: medium;" >Mood Disorder</p>
+						<h2></h2>
+					</header>
+					<p>These disorder, also called affective disorder, may involve:</p>
+                    <ul>
+                        <li>Feeling sad all the time</li>
+                        <li>Losing interest in important parts of life</li>
+                        <li>Fluctuating between extreme happiness and extreme sadness</li>
+                    </ul>
+				</div>
+			</div>
+		</div>
+	</section>
+    <section  class="wrapper style2" id="obsessive-compulsive-disorder" >
+		<div class="inner">
+			<div class="box">
+				<div class="content">
+					<header class="align-center">
+						<p style="font-size: medium;" >Obsessive-Compulsive Disorder</p>
+						<h2></h2>
+					</header>
+					<p>If you have obsessive-compulsive disorder (OCD), you have repeated, upsetting thoughts called obsessions. You do the same thing over and over again to try to make the thoughts go away. Those repeated actions are called compulsions.</p>
+                    <p>Examples of obsessions are a fear of germs or a fear of being hurt. Compulsions include washing your hands, counting, checking on things or cleaning. Untreated, OCD can take over your life.</p>
+                    <p>Researchers think brain circuits may not work properly in people who have OCD. It tends to run in families. The symptoms often begin in children or teens. Treatments that combine medicines and therapy are often effective.</p>
+				</div>
+			</div>
+		</div>
+	</section>
+    <section  class="wrapper style2" id="personality-disorder" >
+		<div class="inner">
+			<div class="box">
+				<div class="content">
+					<header class="align-center">
+						<p style="font-size: medium;" >Personality Disorder</p>
+						<h2></h2>
+					</header>
+					<p>People with personality disorder experience patterns of behavior, feelings, and thinking that can:</p>
+                    <ul>
+                        <li>Interfere with a person’s life</li>
+                        <li>Create problems at work and school</li>
+                        <li>Cause issues in personal and social relationships</li>
+                    </ul>
+                </div>
+			</div>
+		</div>
+	</section>
+    <section  class="wrapper style2" id="psychotic-disorder" >
+		<div class="inner">
+			<div class="box">
+				<div class="content">
+					<header class="align-center">
+						<p style="font-size: medium;" >Psychotic Disorder</p>
+						<h2></h2>
+					</header>
+					<p>People with psychotic disorder lose contact with reality and experience a range of extreme symptoms that usually includes:</p>
+                    <ul>
+                        <li>Hallucinations—hearing or seeing things that are not real, such as voices</li>
+                        <li>Delusions—believing things that are not true</li>
+                    </ul>
+                    <p>However, these symptoms can occur in people with other health problems, including bipolar disorder, dementia, substance abuse disorder, or brain tumors.</p>
+                </div>
+			</div>
+		</div>
+	</section>
+    <section  class="wrapper style2" id="Suicidal-behavior" >
+		<div class="inner">
+			<div class="box">
+				<div class="content">
+					<header class="align-center">
+						<p style="font-size: medium;" >Suicidal Behavior</p>
+						<h2></h2>
+					</header>
+					<p>Suicide causes immeasurable pain, suffering, and loss to individuals, families, and communities nationwide. On average, 112 Americans die by suicide each day. Suicide is the second leading cause of death among 15-24 year olds and more than 9.4 million adults in the United States had serious thoughts of suicide within the past 12 months. But suicide is preventable, so it's important to know what to do</p>
+                    <h3>Warning Signs of Suicide</h3>
+                    <p>If someone you know is showing one or more of the following behaviors, he or she may be thinking about suicide. Don’t ignore these warning signs. Get help immediately.</p>
+                    <ul>
+                        <li>Talking about wanting to die or to kill oneself</li>
+                        <li>Looking for a way to kill oneself</li>
+                        <li>Talking about feeling hopeless or having no reason to live</li>
+                        <li>Talking about feeling trapped or in unbearable pain</li>
+                        <li>Talking about being a burden to others</li>
+                        <li>Increasing the use of alcohol or drugs</li>
+                        <li>Acting anxious or agitated; behaving recklessly</li>
+                        <li>Sleeping too little or too much</li>
+                        <li>Withdrawing or feeling isolated</li>
+                        <li>Showing rage or talking about seeking revenge</li>
+                        <li>Displaying extreme mood swings</li>
+                    </ul>
+                </div>
+			</div>
+		</div>
+	</section>
+    <section  class="wrapper style2" id="post-traumatic-stress-disorder" >
+		<div class="inner">
+			<div class="box">
+				<div class="content">
+					<header class="align-center">
+						<p style="font-size: medium;" >Post-Traumatic Stress Disorder</p>
+						<h2></h2>
+					</header>
+					<p>Post-traumatic stress disorder (PTSD) is a real illness. You can get PTSD after living through or seeing a traumatic event, such as war, a hurricane, rape, physical abuse or a bad accident. PTSD makes you feel stressed and afraid after the danger is over. It affects your life and the people around you.</p>
+                    <p>PTSD can cause problems like:</p>
+                    <ul>
+                        <li>Flashbacks, or feeling like the event is happening again</li>
+                        <li>Trouble sleeping or nightmares</li>
+                        <li>Feeling alone</li>
+                        <li>Angry outbursts</li>
+                        <li>Feeling worried, guilty or sad</li>
+                    </ul>
+                    <p>PTSD starts at different times for different people. Signs of PTSD may start soon after a frightening event and then continue. Other people develop new or more severe signs months or even years later. PTSD can happen to anyone, even children.</p>
+                    <p>Medicines can help you feel less afraid and tense. It might take a few weeks for them to work. Talking to a specially trained doctor or counselor also helps many people with PTSD. This is called talk therapy.</p>
+                </div>
+			</div>
+		</div>
+	</section>
+
+	<!-- Footer -->
+	<footer id="footer">
+		<p><a href="www.nitk.ac.in">National Institute of Technology Karnataka</a></p>
+
+
+		<div class="container">
+			<ul class="icons">
+				<li><a href="#" class="icon fa-twitter"><span class="label">Twitter</span></a></li>
+				<li><a href="#" class="icon fa-facebook"><span class="label">Facebook</span></a></li>
+				<li><a href="#" class="icon fa-instagram"><span class="label">Instagram</span></a></li>
+				<li><a href="#" class="icon fa-envelope-o"><span class="label">Email</span></a></li>
+			</ul>
+			<p>Designed and Developed by <a href="#">TaskForce NITK</a></p>
+		</div>
+		<div class="copyright">
+			&copy; TaskForce NITK. All rights reserved.
+		</div>
+	</footer>
+
+
+	<!-- Scripts -->
+	<!-- <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css" integrity="sha384-rwoIResjU2yc3z8GV/NPeZWAv56rSmLldC3R/AZzGRnGxQQKnKkoFVhFQhNUwEyJ" crossorigin="anonymous">
+
+	<script src="https://code.jquery.com/jquery-3.1.1.slim.min.js" integrity="sha384-A7FZj7v+d/sdmMqp/nOQwliLvUsJfDHW+k9Omg/a/EheAdgtzNs3hpfag6Ed950n" crossorigin="anonymous"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/tether/1.4.0/js/tether.min.js" integrity="sha384-DztdAPBWPRXSA/3eYEEUWrWCy7G5KFbe8fFjk5JAIxUYHKkDx6Qin1DkWx51bBrb" crossorigin="anonymous"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/js/bootstrap.min.js" integrity="sha384-vBWWzlZJ8ea9aCX4pEW3rVHjgjt7zpkNpZk+02D9phzyeVkE+jo0ieGizqPLForn" crossorigin="anonymous"></script> -->
+	<script>
+		var hamContent =true;
+		const hamBtn = document.querySelector(".navbar-btn");
+		console.log(hamBtn);
+		hamBtn.addEventListener("click",()=>{
+			document.querySelector(".navbar-collapse").classList.toggle('collapse');
+		})
+
+	</script>
+	<script src="../assets/js/jquery.min.js" ></script>
+	<script src="../assets/js/jquery.scrollex.min.js"></script>
+	<script src="../assets/js/skel.min.js"></script>
+	<script src="../assets/js/util.js"></script>
+	<script src="../assets/js/main.js"></script>
+
+</body>
+
+</html>
