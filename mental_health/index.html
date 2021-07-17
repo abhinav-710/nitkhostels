@@ -7,6 +7,205 @@
 	<meta charset="utf-8" />
 	<meta name="viewport" content="width=device-width, initial-scale=1" />
 	<link rel="stylesheet" href="../assets/css/main.css" />
+	<style>
+		.inner>header>p {
+			font-weight: bold;
+			font-size: 2rem;
+			color: rgba(255, 255, 255, 0.7);
+		}
+	
+		#header>.logo {
+			display: flex;
+		}
+	
+		.wrapper.style2 {
+			padding: 2rem;
+		}
+	
+		#search-icon {
+			font-size: 1.2rem;
+			margin-top: 3px;
+		}
+	
+		.dropdown-toggle {
+			background-color: rgba(0, 0, 0, 0.975);
+			color: rgba(255, 255, 255, 0.5);
+			padding: 2px;
+			font-size: 16px;
+			border: none;
+		}
+	
+		.dropdown {
+			position: relative;
+			display: inline-block;
+		}
+	
+		.dropdown-menu {
+			display: none;
+			position: absolute;
+			background-color: #f1f1f1;
+			min-width: 200px;
+			box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+			z-index: 1;
+		}
+	
+		.dropdown-menu a {
+			color: black;
+			padding: 12px 9px;
+			text-decoration: none;
+			display: block;
+			font-size: revert;
+		}
+	
+		.dropdown-menu a:hover {
+			background-color: rgba(255, 255, 255, 0.5);
+		}
+	
+	
+		.dropdown-menu a:hover {
+			background-color: #ddd;
+		}
+	
+	
+		.dropdown:hover .dropdown-menu {
+			display: block;
+		}
+	
+		.navbar-collapse {
+			height: 100%;
+			padding: 1px;
+		}
+	
+		ul {
+			margin: 0%;
+			padding: 0%;
+		}
+	
+		ul li {
+			padding: 12px;
+		}
+	
+		ul li a {
+			width: 100%;
+			text-decoration: none;
+			font-size: 16px;
+			color: rgba(255, 255, 255, 0.5);
+		}
+	
+		.navbar-btn {
+			text-decoration: none;
+			border: none;
+			outline: none;
+			display: none;
+		}
+	
+		.navbar-toggleable-md .container {
+			display: flex;
+			flex-wrap: wrap;
+			justify-content: space-between;
+		}
+	
+		.navbar-nav {
+			display: flex;
+			justify-content: right;
+			text-decoration: none;
+			color: rgba(0, 0, 0, 0.975);
+	
+		}
+	
+		input[type=text] {
+			width: 150px;
+			text-decoration: none !important;
+			border: none;
+			border-bottom: solid 1px rgba(255, 255, 255, 0.125);
+			outline: none;
+			padding: 7px;
+			height: 30px;
+			color: white;
+		}
+	
+		.search {
+			padding: 15px;
+			position: relative;
+			display: inline-block;
+		}
+	
+		.search-dropdown-menu {
+			display: none;
+			position: absolute;
+			background-color: #f1f1f1;
+			min-width: 200px;
+			box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+			top: 45px;
+			z-index: 1;
+		}
+	
+		.search-dropdown-menu a {
+			color: black;
+			padding: 12px 9px;
+			text-decoration: none;
+			display: block;
+			font-size: revert;
+		}
+	
+		.search-dropdown-menu a:hover {
+			background-color: rgba(255, 255, 255, 0.5);
+		}
+	
+		.search-dropdown-menu a:hover {
+			background-color: #ddd;
+		}
+	
+		.search:hover .search-dropdown-menu {
+			display: block;
+		}
+	
+		input[type=text]:focus {
+			outline: none;
+		}
+	
+		.search i {
+			font-size: 6px;
+			margin-left: 12px;
+		}
+	
+		@media only screen and (max-width: 575px) {
+			.navbar-nav {
+				display: block;
+			}
+	
+			ul li {
+				padding-top: 5px;
+			}
+	
+			.navbar-btn {
+				display: inline-block;
+				height: 27px;
+				width: 27px;
+				padding: 0%;
+				margin: 15px;
+				background-color: rgba(0, 0, 0, 0.975);
+	
+			}
+	
+			.navbar-btn:hover {
+				background-color: rgba(0, 0, 0, 0.975);
+			}
+	
+			.navbar-btn:focus {
+				background-color: rgba(0, 0, 0, 0.975);
+			}
+	
+			.break {
+				flex-basis: 100%;
+				height: 0;
+			}
+	
+			.collapse {
+				display: none;
+			}
+		}
+	</style>
 </head>
 
 <body class="subpage">
@@ -39,7 +238,57 @@
 			<p style="font-size: 50px" class="align-center">Mental Health</p>
 		</div>
 	</section>
-
+		<section id="two">
+			<nav class="navbar navbar-toggleable-md" style="background-color: rgba(0, 0, 0, 0.975); ">
+				<div class="container">
+					<button class="navbar-btn"><img src="../images/icons8-menu-24.png"></button>
+					<div class="search" style="display: flex;">
+						<input type="text" class="search-input" placeholder="Search...">
+						<i class="icon fa-search" id="search-icon"></i>
+						<div class="search-dropdown-menu"></div>
+					</div>
+					<div class="break"></div>
+					<div class="navbar-collapse collapse">
+						<ul class="navbar-nav links">
+							<!-- <li class="nav-item active">
+								<a class="nav-link" href="#">Link <span class="sr-only">(current)</span></a>
+							</li> -->
+							<li class="nav-item">
+								<a class="nav-link" href="./index.html">Main</a>
+							</li>
+							<li class="nav-item dropdown">
+								<a class="nav-link dropdown-toggle">Disorders</a>
+								<div class="dropdown-menu">
+									<a class="dropdown-item" href="./disorders.html">Anxiety
+										Disorder</a>
+									<a class="dropdown-item" href="./disorders.html">Behavioral
+										Disorder</a>
+									<a class="dropdown-item" href="./disorders.html">Eating
+										Disorder</a>
+									<a class="dropdown-item"
+										href="./disorders.html">Substance
+										Use Disorder</a>
+									<a class="dropdown-item" href="./disorders.html">Mood Disorder</a>
+									<a class="dropdown-item"
+										href="./disorders.html">OCD</a>
+									<a class="dropdown-item"
+										href="./disorders.html">Personality Disorder</a>
+									<a class="dropdown-item" href="#psychotic-disorder">Psychotic
+										Disorder</a>
+									<a class="dropdown-item" href="./disorders.html">Suicidal
+										Behavior</a>
+									<a class="dropdown-item"
+										href="./disorders.html">PTSD</a>
+								</div>
+							</li>
+							<li class="nav-item">
+								<a class="nav-link " href="#">Need Help</a>
+							</li>
+						</ul>
+					</div>
+				</div>
+			</nav>
+		</section>
 	<!-- Two -->
 	<section id="two" class="wrapper style2">
 		<div class="inner">
