@@ -259,26 +259,26 @@
 							<li class="nav-item dropdown">
 								<a class="nav-link dropdown-toggle">Disorders</a>
 								<div class="dropdown-menu">
-									<a class="dropdown-item" href="./disorders.html">Anxiety
+									<a class="dropdown-item" href="./disorders.html#anxiety-disorder">Anxiety
 										Disorder</a>
-									<a class="dropdown-item" href="./disorders.html">Behavioral
+									<a class="dropdown-item" href="./disorders.html#behavioral-disorder">Behavioral
 										Disorder</a>
-									<a class="dropdown-item" href="./disorders.html">Eating
+									<a class="dropdown-item" href="./disorders.html#eating-disorder">Eating
 										Disorder</a>
 									<a class="dropdown-item"
-										href="./disorders.html">Substance
+										href="./disorders.html#mental-health-and-substance-use-disorder">Substance
 										Use Disorder</a>
-									<a class="dropdown-item" href="./disorders.html">Mood Disorder</a>
+									<a class="dropdown-item" href="./disorders.html#mood-disorder">Mood Disorder</a>
 									<a class="dropdown-item"
-										href="./disorders.html">OCD</a>
+										href="./disorders.html#obsessive-compulsive-disorder">OCD</a>
 									<a class="dropdown-item"
-										href="./disorders.html">Personality Disorder</a>
-									<a class="dropdown-item" href="#psychotic-disorder">Psychotic
+										href="./disorders.html#personality-disorder">Personality Disorder</a>
+									<a class="dropdown-item" href="./disorders.html#pyschotic-disorder">Psychotic
 										Disorder</a>
-									<a class="dropdown-item" href="./disorders.html">Suicidal
+									<a class="dropdown-item" href="./disorders.html#suicidal-behavior">Suicidal
 										Behavior</a>
 									<a class="dropdown-item"
-										href="./disorders.html">PTSD</a>
+										href="./disorders.html#suicidal-behavior">PTSD</a>
 								</div>
 							</li>
 							<li class="nav-item">
@@ -290,16 +290,57 @@
 			</nav>
 		</section>
 	<!-- Two -->
-	<section id="two" class="wrapper style2">
+	<section class="wrapper style2">
 		<div class="inner">
 			<div class="box">
 				<div class="content">
-					<header class="align-center">
-						<p></p>
-						<h2>Write anything</h2>
+				<header class="align-center">
+						<p style="font-size: medium;">What is Mental Health &#63;</p>
+						<h2></h2>
 					</header>
-					<p>Write anything here..............................................</p>
-				</div>
+					<p>Mental health includes our emotional, psychological, and social well-being. It affects how we think, feel, and act. It also helps determine how we handle stress, relate to others, and make choices. Mental health is important at every stage of life, from childhood and adolescence through adulthood.
+
+</p>
+<p>
+	Over the course of your life, if you experience mental health problems, your thinking, mood, and behavior could be affected. Many factors contribute to mental health problems, including:
+	<ul>
+		<li>Biological factors, such as genes or brain chemistry</li>
+		<li>
+			Life experiences, such as trauma or abuse
+		</li>
+		<li>Family history of mental health problems
+</li>
+	</ul>
+</p></div>
+			</div>
+		</div>
+	</section>
+	<section class="wrapper style2">
+		<div class="inner">
+			<div class="box">
+				<div class="content">
+				<header class="align-center">
+						<p style="font-size: medium;">Myths and Facts</p>
+						<h2></h2>
+					</header>
+					<p><b style="color:green;font-size:medium">Myth: Children don't experience mental health problems.</b><br><br>
+						<b>Fact: </b> 
+						 Even very young children may show early warning signs of mental health concerns. These mental health problems are often clinically diagnosable, and can be a product of the interaction of biological, psychological, and social factors.
+
+Half of all mental health disorders show first signs before a person turns <b>14 years</b> old, and three quarters of mental health disorders begin before <b>age 24</b>.
+					
+					</p>
+	<p><b style="color:green;font-size:medium">Myth:People with mental health problems are violent and unpredictable.</b><br><br>
+	<b>Fact: </b>  The vast majority of people with mental health problems are no more likely to be violent than anyone else. Most people with mental illness are not violent and only 3%–5% of violent acts can be attributed to individuals living with a serious mental illness. In fact, people with severe mental illnesses are over 10 times more likely to be victims of violent crime than the general population. You probably know someone with a mental health problem and don't even realize it, because many people with mental health problems are highly active and productive members of our communities.
+	
+	</p>
+	<p><b style="color:green;font-size:medium">Myth:There is no hope for people with mental health problems. Once a friend or family member develops mental health problems, he or she will never recover</b><br><br>
+	<b>Fact: </b> 
+	Studies show that people with mental health problems get better and many recover completely. Recovery refers to the process in which people are able to live, work, learn, and participate fully in their communities. There are more treatments, services, and community support systems than ever before, and they work.
+	</p>
+	
+
+</div>
 			</div>
 		</div>
 	</section>
@@ -325,6 +366,37 @@
 
 
 	<!-- Scripts -->
+	<script>
+		var hamContent = true;
+		const hamBtn = document.querySelector(".navbar-btn");
+		//console.log(hamBtn);
+		hamBtn.addEventListener("click", () => {
+			document.querySelector(".navbar-collapse").classList.toggle('collapse');
+		});
+		var dis = { "anxiety disorders": "anxiety-disorde", "behavioral disorders": "behavioral-disorder", "eating disorders": "eating-disorder", "substance use disorders": "mental-health-and-substance-use-disorder", "mood disorders": "mood-disorder", "obsessive compulsive Disorder": "obsessive-compulsive-disorder", "personality disorders": "personality-disorder", "psychotic disorders": "psychotic-disorder", "suicidal behavior": "suicidal-behavior", "trauma and stress related disorders": "post-traumatic-stress-disorder" };
+		var i;
+		const input = document.querySelector(".search-input");
+		const result = document.querySelector('.search-dropdown-menu');
+		input.addEventListener("keyup", () => {
+			//console.log(result);
+			var filter = input.value.toLowerCase();
+			if (filter != "") {
+				//console.log(filter);
+				var searchResults = "";
+				for (s in dis) {
+					if (s.startsWith(filter)) {
+						searchResults += `<a class="dropdown-item" href="#${dis[s]}">${s}</a>`;
+					}
+				}
+				//console.log(searchResults);
+				result.innerHTML = searchResults;
+			}
+			else result.innerHTML = "";
+		});
+
+
+
+	</script>
 	<script src="../assets/js/jquery.min.js"></script>
 	<script src="../assets/js/jquery.scrollex.min.js"></script>
 	<script src="../assets/js/skel.min.js"></script>
